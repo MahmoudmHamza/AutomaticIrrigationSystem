@@ -1,3 +1,16 @@
+## Table of Contents
+
+- [Automatic Irrigation System API](#automatic-irrigation-system-api)
+  - [Technology Stack](#technology-stack)
+  - [Setup Instructions](#setup-instructions)
+  - [Endpoints](#endpoints)
+    - [Add new plot of land](#add-new-plot-of-land)
+    - [Get all plots](#get-all-plots)
+    - [Get a specific plot](#get-a-specific-plot)
+    - [Configure a plot](#configure-a-plot)
+    - [Edit a plot](#edit-a-plot)
+    - [Irrigate a plot](#irrigate-a-plot)
+
 # Automatic Irrigation System API
 
 The Automatic Irrigation System API is a RESTful web service developed using the Spring Framework 2.7. It provides endpoints for managing and controlling an automatic irrigation system for agricultural lands. The API allows users to perform the following actions:
@@ -24,20 +37,6 @@ The API is developed using Spring Framework's RESTful conventions and utilizes t
 3. Run the application using your preferred IDE or build tools.
 
 > Note: Before running the application, make sure to update the database credentials in the application.properties file to match your local database configuration.
-
-## Table of Contents
-
-- [Automatic Irrigation System API](#automatic-irrigation-system-api)
-  - [Technology Stack](#technology-stack)
-  - [Setup Instructions](#setup-instructions)
-  - [Table of Contents](#table-of-contents)
-  - [Endpoints](#endpoints)
-    - [Add new plot of land](#add-new-plot-of-land)
-    - [Get all plots](#get-all-plots)
-    - [Get a specific plot](#get-a-specific-plot)
-    - [Configure a plot](#configure-a-plot)
-    - [Edit a plot](#edit-a-plot)
-    - [Irrigate a plot](#irrigate-a-plot)
 
 ## Endpoints
 
