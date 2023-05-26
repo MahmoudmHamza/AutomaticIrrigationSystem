@@ -4,17 +4,12 @@ import com.automaticirrigation.automaticirrigation.datamodels.PlotConfigurationD
 import com.automaticirrigation.automaticirrigation.datamodels.PlotDTO;
 import com.automaticirrigation.automaticirrigation.entities.IrrigationSlot;
 import com.automaticirrigation.automaticirrigation.entities.Plot;
-import com.automaticirrigation.automaticirrigation.entities.PlotConfiguration;
 import com.automaticirrigation.automaticirrigation.services.Plot.PlotService;
 import com.automaticirrigation.automaticirrigation.services.Sensor.SensorService;
-
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
+import lombok.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import lombok.*;
-
 import java.util.List;
 
 @Log4j2

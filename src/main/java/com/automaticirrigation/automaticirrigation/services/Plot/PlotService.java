@@ -13,7 +13,6 @@ import com.automaticirrigation.automaticirrigation.repositories.PlotRepository;
 import com.automaticirrigation.automaticirrigation.repositories.SensorRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -53,10 +52,10 @@ public class PlotService implements IPlotLandService {
         return plotRepository.save(plot);
     }
 
-    private Sensor assignSensorToPlot(Long sensorId, Plot plot){
+    private void assignSensorToPlot(Long sensorId, Plot plot){
         Optional<Sensor> updatedSensor = sensorRepository.findById(sensorId);
         updatedSensor.get().setPlot(plot);
-        return sensorRepository.save(updatedSensor.get());
+        sensorRepository.save(updatedSensor.get());
     }
 
     @Override
@@ -67,13 +66,13 @@ public class PlotService implements IPlotLandService {
     @Override
     public Plot findPlotById(Long plotId) {
         return plotRepository.findById(plotId).
-                orElseThrow(() -> new EntityNotFoundException("Plot with id: " + plotId + " - not found"));
+                orElseThrow(() -> new EntityNotFoundException("Couldn't find plot with id: [" + plotId + "]"));
     }
 
     @Override
     public IrrigationSlot findIrrigationSlotById(Long irrigationSlotId) {
         return irrigationSlotRepository.findById(irrigationSlotId)
-                .orElseThrow(() -> new EntityNotFoundException("Couldn't find time slot with id: " + irrigationSlotId));
+                .orElseThrow(() -> new EntityNotFoundException("Couldn't find irrigation slot with id: [" + irrigationSlotId + "]"));
     }
 
     @Override
@@ -94,6 +93,6 @@ public class PlotService implements IPlotLandService {
     @Override
     public PlotConfiguration findPlotConfigurationById(Long configurationId) {
         return plotConfigurationsRepository.findById(configurationId)
-                .orElseThrow( () -> new EntityNotFoundException("Couldn't find plot configuration with id: " + configurationId));
+                .orElseThrow( () -> new EntityNotFoundException("Couldn't find plot configuration with id: [" + configurationId +"]"));
     }
 }

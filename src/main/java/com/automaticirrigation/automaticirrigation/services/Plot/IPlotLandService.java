@@ -14,10 +14,8 @@ public interface IPlotLandService {
     Plot findPlotById(Long plotId);
     Plot updatePlot(Long id, PlotDTO plot);
     Plot configurePlot(Long id, PlotConfigurationDTO plotConfiguration);
-
     IrrigationSlot findIrrigationSlotById(Long irrigationSlotId);
     IrrigationSlot updateIrrigationSlot(Long irrigationSlotId);
-
     PlotConfiguration savePlotConfigurations(PlotConfigurationDTO plotConfiguration);
     PlotConfiguration findPlotConfigurationById(Long configurationId);
 

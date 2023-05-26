@@ -1,4 +1,4 @@
-package com.automaticirrigation.automaticirrigation.utilities;
+package com.automaticirrigation.automaticirrigation.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
