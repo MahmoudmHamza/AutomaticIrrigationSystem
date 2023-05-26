@@ -45,28 +45,27 @@ The API is developed using Spring Framework's RESTful conventions and utilizes t
 - Endpoint: `POST /plots`
 - Description: Creates a new plot of land.
 
-
 ### Get all plots
 
-- Endpoint: GET /plots
+- Endpoint: `GET /plots`
 - Description: Retrieves a list of all plots of land.
 
 ### Get a specific plot
 
-- Endpoint: GET /plots/{plotId}
+- Endpoint: `GET /plots/{plotId}`
 - Description: Retrieves a specific plot of land by its ID.
 
 ### Configure a plot
 
-- Endpoint: POST /plots/{plotId}/configure
+- Endpoint: `POST /plots/{plotId}/configure`
 - Description: Configures the irrigation settings for a specific plot of land by adding the amount of water needed for the plot as well as assigning the pre-configured irrigation slot and sensor.
 
 ### Edit a plot
 
-- Endpoint: PUT /plots/{plotId}
+- Endpoint: `PUT /plots/{plotId}`
 - Description: Edits the configurations of a specific plot of land.
 
 ### Irrigate a plot
 
-- Endpoint: POST /plots/{plotId}/irrigate
+- Endpoint: `POST /plots/{plotId}/irrigate`
 - Description: Initiates the irrigation process for a specific plot of land.
